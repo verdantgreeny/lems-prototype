@@ -18,7 +18,7 @@ export default function AdminCourseEditPage() {
     location: '',
     fee: '',
     maxStudents: '',
-    status: 'recruiting' as 'recruiting' | 'closed',
+    status: 'recruiting' as 'recruiting' | 'closed' | 'ongoing',
   });
 
   useEffect(() => {
@@ -69,11 +69,11 @@ export default function AdminCourseEditPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-8">강좌 수정</h1>
-      <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+      <h1 className="mb-8 text-3xl font-bold">강좌 수정</h1>
+      <form onSubmit={handleSubmit} className="p-8 bg-white rounded-lg shadow-lg">
         <div className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">강좌명 *</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">강좌명 *</label>
             <input
               type="text"
               value={formData.name}
@@ -83,7 +83,7 @@ export default function AdminCourseEditPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">카테고리 *</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">카테고리 *</label>
             <select
               value={formData.category}
               onChange={(e) => setFormData({ ...formData, category: e.target.value })}
@@ -98,7 +98,7 @@ export default function AdminCourseEditPage() {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">강사명 *</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">강사명 *</label>
             <input
               type="text"
               value={formData.instructor}
@@ -108,7 +108,7 @@ export default function AdminCourseEditPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">요일 *</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">요일 *</label>
             <div className="flex flex-wrap gap-2">
               {dayOptions.map((day) => (
                 <label key={day} className="flex items-center">
@@ -136,7 +136,7 @@ export default function AdminCourseEditPage() {
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">시간 *</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">시간 *</label>
             <input
               type="text"
               value={formData.time}
@@ -146,7 +146,7 @@ export default function AdminCourseEditPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">장소 *</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">장소 *</label>
             <input
               type="text"
               value={formData.location}
@@ -156,7 +156,7 @@ export default function AdminCourseEditPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">수강료 *</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">수강료 *</label>
             <input
               type="number"
               value={formData.fee}
@@ -166,7 +166,7 @@ export default function AdminCourseEditPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">정원 *</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">정원 *</label>
             <input
               type="number"
               value={formData.maxStudents}
@@ -176,27 +176,30 @@ export default function AdminCourseEditPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">상태 *</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">상태 *</label>
             <select
               value={formData.status}
-              onChange={(e) => setFormData({ ...formData, status: e.target.value as 'recruiting' | 'closed' })}
+              onChange={(e) =>
+                setFormData({ ...formData, status: e.target.value as 'recruiting' | 'closed' | 'ongoing' })
+              }
               className="w-full px-4 py-2 border border-gray-300 rounded-lg"
             >
               <option value="recruiting">모집중</option>
               <option value="closed">마감</option>
+              <option value="ongoing">진행중</option>
             </select>
           </div>
           <div className="flex gap-4">
             <button
               type="submit"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700"
+              className="px-6 py-3 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               수정하기
             </button>
             <button
               type="button"
               onClick={() => navigate('/admin/courses')}
-              className="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300"
+              className="px-6 py-3 font-semibold text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300"
             >
               취소
             </button>

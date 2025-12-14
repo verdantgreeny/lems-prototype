@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { storage, getCurrentUser } from '../../utils/storage';
+import { getCurrentUser } from '../../utils/storage';
 
 export default function FacilityRentalPage() {
   const user = getCurrentUser();
@@ -74,21 +74,19 @@ export default function FacilityRentalPage() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">공간 및 시설 대여</h1>
+    <div className="px-4 py-12 mx-auto max-w-7xl">
+      <h1 className="mb-8 text-4xl font-bold">공간 및 시설 대여</h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         {/* 시설 목록 */}
         <div>
-          <h2 className="text-2xl font-bold mb-6">대여 가능 시설</h2>
+          <h2 className="mb-6 text-2xl font-bold">대여 가능 시설</h2>
           <div className="space-y-4">
             {facilities.map((facility) => (
               <div
                 key={facility.id}
                 className={`bg-white rounded-lg shadow p-6 cursor-pointer transition-all ${
-                  selectedFacility === facility.id
-                    ? 'ring-2 ring-blue-500 border-blue-500'
-                    : 'hover:shadow-lg'
+                  selectedFacility === facility.id ? 'ring-2 ring-blue-500 border-blue-500' : 'hover:shadow-lg'
                 }`}
                 onClick={() => setSelectedFacility(facility.id)}
               >
@@ -96,15 +94,13 @@ export default function FacilityRentalPage() {
                   <h3 className="text-xl font-bold">{facility.name}</h3>
                   <span
                     className={`px-2 py-1 rounded text-xs ${
-                      facility.available
-                        ? 'bg-green-100 text-green-800'
-                        : 'bg-gray-100 text-gray-800'
+                      facility.available ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'
                     }`}
                   >
                     {facility.available ? '대여 가능' : '대여 불가'}
                   </span>
                 </div>
-                <p className="text-gray-600 text-sm mb-2">{facility.description}</p>
+                <p className="mb-2 text-sm text-gray-600">{facility.description}</p>
                 <div className="flex items-center gap-4 text-sm text-gray-500">
                   <span>수용인원: {facility.capacity}</span>
                   <span>대여료: {facility.fee}</span>
@@ -116,29 +112,22 @@ export default function FacilityRentalPage() {
 
         {/* 대여 신청 폼 */}
         <div>
-          <h2 className="text-2xl font-bold mb-6">대여 신청</h2>
+          <h2 className="mb-6 text-2xl font-bold">대여 신청</h2>
           {!user ? (
-            <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
-              <p className="text-yellow-800 mb-4">대여 신청을 하려면 로그인이 필요합니다.</p>
-              <Link
-                to="/login"
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-              >
+            <div className="p-6 border border-yellow-200 rounded-lg bg-yellow-50">
+              <p className="mb-4 text-yellow-800">대여 신청을 하려면 로그인이 필요합니다.</p>
+              <Link to="/login" className="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700">
                 로그인하기
               </Link>
             </div>
           ) : selectedFacility ? (
-            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-6">
+            <form onSubmit={handleSubmit} className="p-6 bg-white rounded-lg shadow-lg">
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  선택한 시설
-                </label>
-                <p className="text-lg font-semibold">
-                  {facilities.find((f) => f.id === selectedFacility)?.name}
-                </p>
+                <label className="block mb-2 text-sm font-medium text-gray-700">선택한 시설</label>
+                <p className="text-lg font-semibold">{facilities.find((f) => f.id === selectedFacility)?.name}</p>
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block mb-2 text-sm font-medium text-gray-700">
                   대여 날짜 <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -151,7 +140,7 @@ export default function FacilityRentalPage() {
               </div>
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block mb-2 text-sm font-medium text-gray-700">
                     시작 시간 <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -163,7 +152,7 @@ export default function FacilityRentalPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block mb-2 text-sm font-medium text-gray-700">
                     종료 시간 <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -176,7 +165,7 @@ export default function FacilityRentalPage() {
                 </div>
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block mb-2 text-sm font-medium text-gray-700">
                   사용 목적 <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -188,7 +177,7 @@ export default function FacilityRentalPage() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block mb-2 text-sm font-medium text-gray-700">
                   연락처 <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -201,13 +190,13 @@ export default function FacilityRentalPage() {
               </div>
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700"
+                className="w-full px-6 py-3 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700"
               >
                 신청하기
               </button>
             </form>
           ) : (
-            <div className="bg-gray-50 p-6 rounded-lg text-center text-gray-500">
+            <div className="p-6 text-center text-gray-500 rounded-lg bg-gray-50">
               <p>대여할 시설을 선택해주세요.</p>
             </div>
           )}
@@ -216,4 +205,3 @@ export default function FacilityRentalPage() {
     </div>
   );
 }
-
