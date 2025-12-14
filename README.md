@@ -1,4 +1,4 @@
-# 중원대학교 평생교육원 LEMS 프로토타입
+# 대학 평생교육원 LEMS 프로토타입
 
 시연용 웹 프로토타입입니다.
 
@@ -18,7 +18,7 @@ npm run build
 ## GitHub Pages 배포
 
 1. `vite.config.ts`의 `base` 경로를 확인하세요.
-2. 빌드 후 `dist` 폴더를 GitHub Pages에 배포하세요.
+2. 빌드 후 `dist` 폴더를 GitHub Pages에 배포할 예정입니다.
 
 ## 테스트 계정
 
