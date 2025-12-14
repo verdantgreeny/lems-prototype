@@ -17,8 +17,7 @@ npm run build
 
 ## GitHub Pages 배포
 
-1. `vite.config.ts`의 `base` 경로를 확인하세요.
-2. 빌드 후 `dist` 폴더를 GitHub Pages에 배포할 예정입니다.
+1. 'https://verdantgreeny.github.io/lems-prototype/'로 배포 완료
 
 ## 테스트 계정
 
