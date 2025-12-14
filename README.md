@@ -17,7 +17,7 @@ npm run build
 
 ## GitHub Pages 배포
 
-1. 'https://verdantgreeny.github.io/lems-prototype/'로 배포 완료
+1. https://verdantgreeny.github.io/lems-prototype/ (배포완료)
 
 ## 테스트 계정
 
