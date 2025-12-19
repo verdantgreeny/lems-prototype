@@ -18,7 +18,7 @@ export default function FacilitiesPage() {
     },
     {
       name: '평생교육원 사무실',
-      description: '수강 신청 및 상담이 가능한 사무실입니다. (중원대학교(구)스포츠센터 내)',
+      description: '수강 신청 및 상담이 가능한 사무실입니다. (00대학교(구)스포츠센터 내)',
     },
   ];
 

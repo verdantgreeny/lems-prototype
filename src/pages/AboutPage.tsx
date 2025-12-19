@@ -6,7 +6,7 @@ export default function AboutPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">설립 목적</h2>
         <p className="text-gray-700 leading-relaxed">
-          중원대학교 평생교육원은 지역사회 구성원의 평생학습을 지원하고, 다양한 교육 프로그램을 제공하여 지역사회 발전에
+          00대학교 평생교육원은 지역사회 구성원의 평생학습을 지원하고, 다양한 교육 프로그램을 제공하여 지역사회 발전에
           기여하고 있습니다.
         </p>
       </section>
@@ -26,7 +26,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold mb-4">연락처</h2>
         <div className="bg-gray-50 p-6 rounded-lg">
           <p className="mb-2">
-            <strong>주소:</strong> 28024 충청북도 괴산군 괴산읍 문무로 85 중원대학교
+            <strong>주소:</strong> 28024 충청북도 괴산군 괴산읍 문무로 85 00대학교
           </p>
           <p className="mb-2">
             <strong>전화:</strong> 043-830-8232~3

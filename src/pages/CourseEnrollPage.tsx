@@ -50,13 +50,13 @@ export default function CourseEnrollPage() {
     const baseFee = course.fee;
     if (course.category === '수영 및 수중운동') {
       switch (discountType) {
-        case '중원대 재학생':
+        case '00대 재학생':
         case '교직원':
         case '재단관계자':
           return 75000;
-        case '중원대 재학생 가족':
+        case '00대 재학생 가족':
         case '교직원 가족':
-        case '중원대 졸업생 본인(학부,대학원)':
+        case '00대 졸업생 본인(학부,대학원)':
         case '괴산, 음성, 진천 군민':
           return 110000;
         case '괴산사이버군민':
@@ -95,10 +95,10 @@ export default function CourseEnrollPage() {
           '일반인 - 150,000원',
           '괴산사이버군민 - 130,000원',
           '학생군사학교 - 130,000원',
-          '중원대 재학생 가족, 교직원 가족 - 110,000원',
-          '중원대 졸업생 본인(학부,대학원) - 110,000원',
+          '00대 재학생 가족, 교직원 가족 - 110,000원',
+          '00대 졸업생 본인(학부,대학원) - 110,000원',
           '괴산, 음성, 진천 군민 - 110,000원',
-          '중원대 재학생 - 75,000원',
+          '00대 재학생 - 75,000원',
           '재단관계자 - 75,000원',
           '교직원 - 75,000원',
           '취약계층(만65세이상, 1960년생 부터) - 70,000원',
@@ -106,9 +106,9 @@ export default function CourseEnrollPage() {
         ]
       : [
           '일반인',
-          '중원대 재학생/교직원 본인 (50% 할인)',
-          '중원대 재학생/교직원 가족 (50% 할인)',
-          '중원대 졸업생 본인 (20% 할인)',
+          '00대 재학생/교직원 본인 (50% 할인)',
+          '00대 재학생/교직원 가족 (50% 할인)',
+          '00대 졸업생 본인 (20% 할인)',
           '학생군사학교 직원 본인 (20% 할인)',
         ];
 
@@ -154,7 +154,7 @@ export default function CourseEnrollPage() {
       <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
         <p className="text-sm text-yellow-800">
           <strong>
-            2025년 중원대학교 평생교육원 "{course.month} {course.name}" 수강 신청서입니다.
+            2025년 00대학교 평생교육원 "{course.month} {course.name}" 수강 신청서입니다.
           </strong>
         </p>
         {course.category === '수영 및 수중운동' && (
@@ -270,7 +270,7 @@ export default function CourseEnrollPage() {
               결제방법 <span className="text-red-500">*</span>
             </label>
             <div className="bg-gray-50 p-3 rounded-lg mb-3 text-sm text-gray-600">
-              <p>• 계좌송금: 신한은행 100-036-941482 중원대학교(신청인 2명이면 2명 이름 모두 기재요망)</p>
+              <p>• 계좌송금: 신한은행 100-036-941482 00대학교(신청인 2명이면 2명 이름 모두 기재요망)</p>
               <p>• 카드결제: 평생교육원 사무실</p>
             </div>
             <div className="space-y-2">
@@ -485,7 +485,7 @@ export default function CourseEnrollPage() {
               />
               <div className="flex-1">
                 <span className="font-medium">
-                  중원대학교 평생교육원에서 진행되는 프로그램은 충청북도 지역혁신중심대학체계 [RISE 3-2-1] 평생학습대학
+                  00대학교 평생교육원에서 진행되는 프로그램은 충청북도 지역혁신중심대학체계 [RISE 3-2-1] 평생학습대학
                   "오세유"프로그램과 함께합니다. 참여에 동의합니다. <span className="text-red-500">*</span>
                 </span>
                 <p className="text-sm text-gray-600 mt-1">
@@ -519,7 +519,7 @@ export default function CourseEnrollPage() {
               <li>2. 강의장소: {course.location}</li>
               <li>3. 정기휴장: 매주 월요일(실내수영장, 샤워장, 스포츠센터, 실외골프실습장)</li>
               <li>4. 카드결제: 평생교육원 사무실</li>
-              <li>5. 입금계좌: 신한은행 100-036-941482 중원대학교</li>
+              <li>5. 입금계좌: 신한은행 100-036-941482 00대학교</li>
             </ul>
             <p className="text-sm text-yellow-800 mt-2">문의: 평생교육원 사무실 043-830-8232, 8233, 8235</p>
           </div>

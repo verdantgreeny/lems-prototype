@@ -4,9 +4,9 @@ export default function GreetingPage() {
       <h1 className="text-4xl font-bold mb-8">인사말</h1>
       <div className="bg-white rounded-lg shadow-lg p-8">
         <div className="prose max-w-none">
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">중원대학교 평생교육원에 오신 것을 환영합니다.</p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">00대학교 평생교육원에 오신 것을 환영합니다.</p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            중원대학교 평생교육원은 지역사회 구성원의 평생학습을 지원하고, 다양한 교육 프로그램을 제공하여 지역사회
+            00대학교 평생교육원은 지역사회 구성원의 평생학습을 지원하고, 다양한 교육 프로그램을 제공하여 지역사회
             발전에 기여하고 있습니다.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">

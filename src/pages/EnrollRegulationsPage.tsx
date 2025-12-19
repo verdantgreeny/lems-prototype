@@ -17,7 +17,7 @@ export default function EnrollRegulationsPage() {
           <div className="space-y-4">
             <div>
               <h3 className="font-semibold mb-2">1. 계좌입금</h3>
-              <p className="text-gray-700">신한은행 100-036-941482 중원대학교</p>
+              <p className="text-gray-700">신한은행 100-036-941482 00대학교</p>
               <ul className="mt-2 space-y-1 text-sm text-gray-600">
                 <li>• 신청자 이름으로 입금하기 (불일치시 확인불가)</li>
                 <li>• 수강 신청 기간 내 입금 바랍니다</li>
@@ -25,7 +25,7 @@ export default function EnrollRegulationsPage() {
             </div>
             <div>
               <h3 className="font-semibold mb-2">2. 카드결제</h3>
-              <p className="text-gray-700">평생교육원 사무실 방문 (중원대학교(구)스포츠센터 내)</p>
+              <p className="text-gray-700">평생교육원 사무실 방문 (00대학교(구)스포츠센터 내)</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2">3. 평생교육이용권(바우처카드)</h3>

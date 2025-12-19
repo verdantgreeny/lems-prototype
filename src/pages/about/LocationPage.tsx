@@ -5,7 +5,7 @@ export default function LocationPage() {
       <div className="bg-white rounded-lg shadow-lg p-8">
         <div className="mb-6">
           <h2 className="text-2xl font-bold mb-4">주소</h2>
-          <p className="text-lg text-gray-700">28024 충청북도 괴산군 괴산읍 문무로 85 중원대학교</p>
+          <p className="text-lg text-gray-700">28024 충청북도 괴산군 괴산읍 문무로 85 00대학교</p>
         </div>
 
         <div className="mb-6">
@@ -21,7 +21,7 @@ export default function LocationPage() {
           <div className="space-y-4">
             <div>
               <h3 className="font-semibold mb-2">자가용 이용시</h3>
-              <p className="text-gray-700">경부고속도로 → 괴산IC → 괴산읍 방면 → 중원대학교</p>
+              <p className="text-gray-700">경부고속도로 → 괴산IC → 괴산읍 방면 → 00대학교</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2">대중교통 이용시</h3>

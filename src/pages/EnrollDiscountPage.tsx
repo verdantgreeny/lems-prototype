@@ -12,7 +12,7 @@ export default function EnrollDiscountPage() {
               <tr>
                 <th className="px-6 py-4 text-left">대상</th>
                 <th className="px-6 py-4 text-center">정상가</th>
-                <th className="px-6 py-4 text-center">중원대 자체 지원</th>
+                <th className="px-6 py-4 text-center">00대 자체 지원</th>
                 <th className="px-6 py-4 text-center">괴산군 지원</th>
                 <th className="px-6 py-4 text-center">본인 부담액 (최종할인율)</th>
               </tr>

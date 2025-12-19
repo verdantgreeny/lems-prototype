@@ -11,7 +11,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">중원대학교 평생교육원</h1>
+          <h1 className="text-5xl font-bold mb-4">00대학교 평생교육원</h1>
           <p className="text-xl mb-8">평생학습을 통한 인재 양성과 지역사회 발전에 기여합니다</p>
           <div className="flex gap-4 justify-center">
             <Link to="/courses" className="px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100">
